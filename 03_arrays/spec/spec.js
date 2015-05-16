@@ -50,6 +50,10 @@ describe('last_n', function() {
   it('returns the last n objects in the array', function() {
     expect(yourCode.last_n([1,2,3,4,5], 3)).toEqual([3,4,5]);
   });
+
+  it('returns as many elements as it can when there are less than n', function() {
+    expect(yourCode.last_n([1,2], 3)).toEqual([1,2]);
+  });
 });
 
 describe('last_n_fucked_up', function() {
@@ -60,6 +64,10 @@ describe('last_n_fucked_up', function() {
   it('returns as many elements as it can when there are less than n', function() {
     expect(yourCode.last_n([1,2], 3)).toEqual([1,2]);
   });
+
+  it('returns the array when desired length is array.length', function() {
+    expect(yourCode.last_n([1,2,3], 3)).toEqual([1,2,3]);
+  });
 });
 
 describe('drop', function() {
@@ -67,7 +75,7 @@ describe('drop', function() {
     expect(yourCode.drop([1,2,3,4,5,6], 3)).toEqual([4,5,6]);
   });
 
-  it('returns an empty array if there not enough elements after dropping the n elements', function() {
+  it('returns an empty array if there are not enough elements after dropping the n elements', function() {
     expect(yourCode.drop([1,2], 3)).toEqual([]);
   });
 });

@@ -28,11 +28,12 @@ module.exports = {
   },
 
   last_n_fucked_up: function(array, desired_length) {
-    if(desired_length >= array.length)
+    if(desired_length >= array.length) {
       return array;
     } else {
       return array.slice()
     }
+  },
 
   //
   // last_n([1,2,3,4], 2) ==> starting_index is 4 - 2, index 2 which holds 3 because fuck computers;

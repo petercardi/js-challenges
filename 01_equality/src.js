@@ -20,7 +20,6 @@ module.exports = {
     return arg < argh
   }
 
-
-
+/* I'll start using semicolons when I have to. The finer I resolve the borders of what's possible, the better I understand the rules. */
 
 }
